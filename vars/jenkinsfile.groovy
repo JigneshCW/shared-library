@@ -34,7 +34,7 @@ def call() {
                 {
 			//echo Notify.formatThis('test')
 			echo "Job Name 1 : ${env.JOB_NAME}"
-			echo  "Job Name : " +  Notify.mailBody('${evn.JOB_NAME}"'
+			echo  "Job Name : " +  Notify.mailBody('${evn.JOB_NAME}')
                     //echo mailBody()
                    // mail bcc: '', body: '' + notify1.mailBody() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
                 }
