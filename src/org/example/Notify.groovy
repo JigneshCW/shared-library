@@ -1,8 +1,8 @@
 package org.example
 
 class Notify{
-  def static String mailBody(def JobName){
-        echo JobName
+  def static String mailBody(String JobName){
+        return JobName
     
   }
 
