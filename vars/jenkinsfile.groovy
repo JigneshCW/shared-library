@@ -22,9 +22,9 @@ def call(Map config=[:], Closure body) {
                 echo 'Deploying.......'
             }
         }
-         body()
+         
     }
      
-     
+     body()
   }
 }
