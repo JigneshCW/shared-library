@@ -1,8 +1,8 @@
-def call(Closure body) {
+def call() {
  pipeline {
     agent any
 
-    
+    stages {
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -22,7 +22,6 @@ def call(Closure body) {
                 echo 'Deploying.......'
             }
         }
-     body()
-   
+    }
 }
 }
