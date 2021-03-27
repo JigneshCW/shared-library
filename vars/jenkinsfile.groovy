@@ -22,7 +22,8 @@ def call(Closure body) {
                 echo 'Deploying.......'
             }
         }
-     body()
+    
     }
+   body()
 }
 }
