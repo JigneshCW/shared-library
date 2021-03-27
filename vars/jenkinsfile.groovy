@@ -1,4 +1,4 @@
-import org.example.Notifications
+import org.example.Notify
 def call() {
  pipeline {
     agent any
@@ -32,7 +32,7 @@ def call() {
                 always
                 {
                     //echo mailBody()
-                    mail bcc: '', body: '' + Notifications.mailBody() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
+                    mail bcc: '', body: '' + Notify.mailBody() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
                 }
             }
             
