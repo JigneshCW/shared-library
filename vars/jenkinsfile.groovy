@@ -33,7 +33,7 @@ def call() {
                 always
                 {
 			//echo Notify.formatThis('test')
-			echo  ${this.env.JOB_NAME}
+			echo  "Job Name : ${env.JOB_NAME}"
                     //echo mailBody()
                    // mail bcc: '', body: '' + notify1.mailBody() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
                 }
