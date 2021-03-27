@@ -1,4 +1,4 @@
-def call(Closure body) {
+def call(Map config=[:], Closure body) {
     pipeline {
         //checkout scm
         stage('Install') {
@@ -9,7 +9,9 @@ def call(Closure body) {
         }
         stage('Deploy') {
            
-                echo 'Deployed on server'
+              if (config.deploy) {
+                echo 'Deployment on server'
+            }
            
         }
         
