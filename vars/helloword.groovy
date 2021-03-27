@@ -1,4 +1,4 @@
-def call() {
+def call(Closure body) {
     pipeline {
         //checkout scm
         stage('Install') {
@@ -12,5 +12,7 @@ def call() {
                 echo 'Deployed on server'
            
         }
+        
+        body()
     }
 }
