@@ -8,9 +8,9 @@ def call() {
             echo 'Testing Section '
         }
         stage('Deploy') {
-            if (deploy == true) {
+           
                 echo 'Deployed on server'
-            }
+           
         }
     }
 }
