@@ -14,7 +14,7 @@ class Notify{
     //def changeString = "<b>Changes :</b> <br/>"
     def haveChages = "No"
 
-        def changeLogSets = currentBuild.changeSets
+        def changeLogSets = script.currentBuild.changeSets
         for (int i = 0; i < changeLogSets.size(); i++) {
             def entries = changeLogSets[i].items
             for (int j = 0; j < entries.length; j++) {
