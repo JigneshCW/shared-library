@@ -1,4 +1,4 @@
-def call(Map config=[:], Closure body) {
+def call() {
  pipeline {
     agent any
 
@@ -25,6 +25,6 @@ def call(Map config=[:], Closure body) {
          
     
      
-     body()
+    
   }
 }
