@@ -1,6 +1,7 @@
 def call(Map config=[:], Closure body) {
     pipeline {
         //checkout scm
+        stages {
         stage('Install') {
             echo 'Tools has been installed'
         }
@@ -14,7 +15,7 @@ def call(Map config=[:], Closure body) {
             }
            
         }
-        
+        }
         body()
     }
 }
