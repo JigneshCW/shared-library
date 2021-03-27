@@ -5,7 +5,7 @@ def call() {
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         jdk "JDK"
-        maven "Maven"
+        maven "MyMaven"
     }
 
     stages {
