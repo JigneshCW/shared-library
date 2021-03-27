@@ -1,7 +1,7 @@
 package org.example
 
 class Notify{
-  def string mailBody(){
+  def static string mailBody(){
 
     def mailBody = "<html><table border='1' width='100%' style='border: inset;'>"
     mailBody += "<tr><td colspan='2' style='background-color: cornflowerblue;color: white;'><b>Build Status :</b></td></tr>"
