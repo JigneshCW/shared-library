@@ -1,6 +1,6 @@
 package org.example
 
-class Notifications{
+class Notify{
   def string mailBody(){
 
     def mailBody = "<html><table border='1' width='100%' style='border: inset;'>"
