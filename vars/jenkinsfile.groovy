@@ -1,4 +1,4 @@
-def call() {
+def call(Closure body) {
  pipeline {
     agent any
 
@@ -22,6 +22,7 @@ def call() {
                 echo 'Deploying.......'
             }
         }
+     body()
     }
 }
 }
