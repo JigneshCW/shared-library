@@ -1,4 +1,5 @@
-pipeline {
+def call(Map config=[:], Closure body) {
+ pipeline {
     agent any
 
     stages {
@@ -21,5 +22,9 @@ pipeline {
                 echo 'Deploying.......'
             }
         }
+         body()
     }
+     
+     
+  }
 }
