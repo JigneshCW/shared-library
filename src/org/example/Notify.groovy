@@ -5,7 +5,7 @@ class Notify{
         
     //println currntBuild
     // return CurrentBuild[0].toString()
-   return "Size : " + currntBuild[0].toString()
+   return "Size : " + currntBuild[0].items.toString()
   }
 
 
