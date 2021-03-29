@@ -27,7 +27,7 @@ def call(String recipients) {
     mailBody += "<tr><td colspan='2'><b>Build Status :</b></td></tr>"
     mailBody += "<tr><td width='25%'><b>Project : </b></td><td width='75%'> ${env.JOB_NAME} </td></tr>"
     mailBody += "<tr><td width='25%'><b>Build Number : </b></td><td width='75%'> ${env.BUILD_NUMBER} </td></tr>"
-    mailBody += "<tr><td width='25%'><b>URL build : </b></td><td width='75%'> ${env.BUILD_URL} </td></tr>"
+    mailBody += "<tr><td width='25%'><b>URL build : </b></td><td width='75%'> ${currentBuild.displayName} </td></tr>"
     mailBody += "<tr><td colspan='2'><b>Change Logs :</b></td></tr>"
 
     MAX_MSG_LEN = 100
