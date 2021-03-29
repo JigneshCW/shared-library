@@ -5,7 +5,7 @@ class Notify{
         
     //println currntBuild
     // return CurrentBuild[0].toString()
-   println currntBuild.toString()
+   return currntBuild.toString()
   }
 
 
