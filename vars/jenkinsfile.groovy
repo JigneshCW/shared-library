@@ -45,32 +45,7 @@ def call() {
             
 		
         }
-        stage('Deployment On QA')
-        {
-            steps{
-                sh "ssh ${env.B4L_QA_Server} 'fuser -k 9092/tcp'"
-                sh "scp '/var/lib/jenkins/jobs/${env.JOB_NAME}/builds/${env.BUILD_NUMBER}/archive/target/user-service-0.0.1-SNAPSHOT.jar' ${env.B4L_QA_Server}:/apps/services/msme/service-TestService"
-                sh "ssh ${env.B4L_QA_Server} 'java -jar /apps/services/msme/service-TestService/user-service-0.0.1-SNAPSHOT.jar' &"
-            }
-        }
-        stage('Deployment On UAT')
-        {
-            
-            input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "jignesh"
-                parameters {
-                    string(name: 'Say Anything', defaultValue: 'Anything', description: 'You can type anything to proceed')
-                }
-           
-            }
-            steps{
-                sh "ssh jignesh.mirani@${env.B4L_UAT_Server} 'fuser -k 9092/tcp'"
-                sh "scp '/var/lib/jenkins/jobs/${env.JOB_NAME}/builds/${env.BUILD_NUMBER}/archive/target/user-service-0.0.1-SNAPSHOT.jar' jignesh.mirani@${env.B4L_UAT_Server}:/apps/services/msme/service-TestService"
-                sh "ssh jignesh.mirani@${env.B4L_UAT_Server} 'java -jar /apps/services/msme/service-TestService/user-service-0.0.1-SNAPSHOT.jar' &"
-            }
-        }
+        
     }
 }
 
