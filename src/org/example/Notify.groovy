@@ -1,9 +1,9 @@
 package org.example
 
 class Notify{
-  def static String mailBody(){
+  def static String mailBody(currntBuild){
         
-    println build.changeSet
+    println currntBuild
     // return CurrentBuild[0].toString()
     
   }
