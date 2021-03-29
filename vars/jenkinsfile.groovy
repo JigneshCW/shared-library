@@ -1,4 +1,3 @@
-import org.example.Notify
 
 def call() {
  pipeline {
@@ -29,28 +28,15 @@ def call() {
                
                 always
                 {
-			//echo Notify.formatThis('test')
-			echo "Job Name 1 : ${env.JOB_NAME}"
 			
-			//echo  Notify.mailBody("${env.JOB_NAME}")
-			echo "${currentBuild.result}"
-			//echo Notify.mailBody("${currentBuild.changeSets}")
-			
-			SendMail('abc@abc.com')
+			        echo "Branch Name : ${env.BRANCH_NAME}"
+				echo SendMail()
 			
                     //echo mailBody()
-                   // mail bcc: '', body: '' + notify1.mailBody() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
+                    //mail bcc: '', body: '' + SendMail() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
                 }
             }
-            
-		
-        }
-        
+         }
     }
 }
-
-
-
-
-
 }
