@@ -10,7 +10,7 @@ class Notify{
     mailBody += "<tr><td width='25%'><b>URL build : </b></td><td width='75%'> BuildURL </td></tr>"
     mailBody += "<tr><td colspan='2'><b>Change Logs :</b></td></tr>"
 
-    MAX_MSG_LEN = 100
+    def MAX_MSG_LEN = 100
     //def changeString = "<b>Changes :</b> <br/>"
     def haveChages = "No"
 
