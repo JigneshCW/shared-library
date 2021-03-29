@@ -1,4 +1,4 @@
-import org.example.Constants
+import org.Constants
 
 def call() {
  pipeline {
