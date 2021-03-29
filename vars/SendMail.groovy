@@ -32,5 +32,5 @@ def call() {
         mailBody += "<tr><td colspan='2'> - No new changes </td></tr>"
     }
     mailBody += "</table></html>"
-    println mailBody
+    return mailBody
 }
