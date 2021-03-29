@@ -1,9 +1,9 @@
 package org.example
 
 class Notify{
-  def static String mailBody(){
-        def JobName = "${JOB_NAME}"
-    return JobName
+  def static String mailBody(jobName){
+        
+    return "Job Name : " + JobName
     
   }
 
