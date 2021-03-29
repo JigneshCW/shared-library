@@ -4,7 +4,7 @@ class Notify{
   def static String mailBody(String[] CurrentBuild){
         
   
-    return CurrentBuild.size().toString()
+    return CurrentBuild[0].items
     
   }
 
