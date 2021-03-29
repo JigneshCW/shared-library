@@ -1,3 +1,4 @@
+import org.example.Constants
 
 def call() {
  pipeline {
@@ -31,6 +32,7 @@ def call() {
 			
 			        echo "Branch Name : ${env.BRANCH_NAME}"
 				echo SendMail()
+			echo "QA SERVER : " + Constants.QA_SERVER
 			
                     //echo mailBody()
                     //mail bcc: '', body: '' + SendMail() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
