@@ -36,6 +36,7 @@ def call() {
 			echo "Job Name 1 : ${env.JOB_NAME}"
 			
 			//echo  Notify.mailBody("${env.JOB_NAME}")
+			echo currentBuild
 			echo Notify.mailBody(currentBuild)
                     //echo mailBody()
                    // mail bcc: '', body: '' + notify1.mailBody() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
