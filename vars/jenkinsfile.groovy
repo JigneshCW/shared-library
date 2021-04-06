@@ -4,7 +4,7 @@ def call() {
  pipeline {
     agent any
     triggers {
-	pollSCM('H/5 * * * *') 
+	cron('H/5 * * * *') 
     }
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
