@@ -3,9 +3,9 @@ import org.Constants
 def call() {
  pipeline {
     agent any
-    triggers {
-	pollSCM('H/2 * * * *') 
-    }
+    //triggers {
+	//pollSCM('H/2 * * * *') 
+    //}
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         jdk "JDK"
@@ -33,7 +33,7 @@ def call() {
                 {
 			
 			        echo "Branch Name : ${env.BRANCH_NAME}"
-				echo SendMail()
+				//echo SendMail()
 			echo "QA SERVER : " + Constants.QA_SERVER
 			
                     //echo mailBody()
