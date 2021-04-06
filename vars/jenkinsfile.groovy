@@ -16,7 +16,7 @@ def call() {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-		    git url:'https://github.com/jigneshmirani/Service-User.git', branch:"${env.BRANCH_NAME}"
+		    git poll: true, url:'https://github.com/jigneshmirani/Service-User.git', branch:"${env.BRANCH_NAME}"
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean package"
