@@ -1,4 +1,4 @@
-def call(String msg) {
+def call(msg) {
  
   def mailBody = "<html><table border='1' width='100%'>"
     mailBody += "<tr><td colspan='2'><b>Build Status :</b></td></tr>"
