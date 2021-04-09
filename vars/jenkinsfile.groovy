@@ -42,7 +42,7 @@ def call() {
 					//echo SendMail()
 					echo "QA SERVER : " + Constants.QA_SERVER
 					// mail to: 'jignesh.mirani@onlinepsbloans.com', subject: 'Failure!', body: "Build failed: ${e.getMessage()}"
-					mail bcc: '', body: '' + SendFailureMail("${e.getMessage()}") , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
+					mail bcc: '', body: '' + SendFailureMail(e.getMessage()) , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
 					//mail to: 'dest@domain', subject: "Failure of Jenkins", body: e.getMessage()+"\nTry harder the next time."
 					//error(e.getMessage())
 				    }
