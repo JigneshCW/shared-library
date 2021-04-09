@@ -36,9 +36,9 @@ def call() {
 				try {
 					def var=10/0
 				    } catch (Exception e) {
-					println(e.getMessage())
+					println("ERROR : " + e.getMessage())
 					//mail to: 'dest@domain', subject: "Failure of Jenkins", body: e.getMessage()+"\nTry harder the next time."
-					error(e.getMessage())
+					//error(e.getMessage())
 				    }
 				
 			}
