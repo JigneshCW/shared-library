@@ -37,7 +37,7 @@ def call() {
 					def var=10/0
 				    } catch (Exception e) {
 					println("ERROR : " + e.getMessage())
-					 mail to: 'jignesh.mirani@onlinepsbloans.com', subject: 'Failure!', body: "Build failed: ${errorUrl(e)}"
+					 mail to: 'jignesh.mirani@onlinepsbloans.com', subject: 'Failure!', body: "Build failed: ${e.getMessage()}"
 					//mail to: 'dest@domain', subject: "Failure of Jenkins", body: e.getMessage()+"\nTry harder the next time."
 					//error(e.getMessage())
 				    }
