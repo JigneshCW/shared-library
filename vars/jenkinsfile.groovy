@@ -38,7 +38,7 @@ def call() {
 			
                     //echo mailBody()
                     //mail bcc: '', body: '' + SendMail() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
-			emailext attachLog: true, body: '' + SendMail() ,  charset: 'UTF-8',  mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
+			emailext attachLog: true, body: '' + SendMail() ,    mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
                 }
             }
          }
