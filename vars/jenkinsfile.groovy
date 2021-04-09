@@ -32,6 +32,16 @@ def call() {
                 always
                 {
 			
+			script{
+				try {
+					def var=10/0
+				    } catch (Exception e) {
+					println(e.getMessage())
+					//mail to: 'dest@domain', subject: "Failure of Jenkins", body: e.getMessage()+"\nTry harder the next time."
+					error(e.getMessage())
+				    }
+				
+			}
 			        echo "Branch Name : ${env.BRANCH_NAME}"
 				//echo SendMail()
 			echo "QA SERVER : " + Constants.QA_SERVER
