@@ -34,23 +34,25 @@ def call() {
 			
 			script{
 				try {
-					//def var=10/0
-					sh "mvn clean package"
+					def var=10/0
+					//sh "mvn clean package"
 				    } catch (Exception e) {
 					println("ERROR : " + e.getMessage())
-					 mail to: 'jignesh.mirani@onlinepsbloans.com', subject: 'Failure!', body: "Build failed: ${e.getMessage()}"
+					 echo "Branch Name : ${env.BRANCH_NAME}"
+					//echo SendMail()
+					echo "QA SERVER : " + Constants.QA_SERVER
+					// mail to: 'jignesh.mirani@onlinepsbloans.com', subject: 'Failure!', body: "Build failed: ${e.getMessage()}"
+					mail bcc: '', body: '' + SendFailureMail("${e.getMessage()}") , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans".com"
 					//mail to: 'dest@domain', subject: "Failure of Jenkins", body: e.getMessage()+"\nTry harder the next time."
 					//error(e.getMessage())
 				    }
 				
 			}
-			        echo "Branch Name : ${env.BRANCH_NAME}"
-				//echo SendMail()
-			echo "QA SERVER : " + Constants.QA_SERVER
+			       
 			
                     //echo mailBody()
                     //mail bcc: '', body: '' + SendMail() , cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
-			emailext attachLog: true, body: '' + SendMail() ,    mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
+			//emailext attachLog: true, body: '' + SendMail() ,    mimeType: 'text/html', replyTo: '', subject: "Build Status ${currentBuild.currentResult}: Project name -> ${env.JOB_NAME}", to: "jignesh.mirani@onlinepsbloans.com"
                 }
             }
          }
