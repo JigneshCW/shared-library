@@ -34,7 +34,8 @@ def call() {
 			
 			script{
 				try {
-					def var=10/0
+					//def var=10/0
+					sh "mvn clean package"
 				    } catch (Exception e) {
 					println("ERROR : " + e.getMessage())
 					 mail to: 'jignesh.mirani@onlinepsbloans.com', subject: 'Failure!', body: "Build failed: ${e.getMessage()}"
